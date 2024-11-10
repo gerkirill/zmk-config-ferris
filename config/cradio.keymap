@@ -37,7 +37,7 @@
             tapping-term-ms = <300>; //220
             quick-tap-ms = <200>; //150
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>; // it can make difference
+            // require-prior-idle-ms = <100>; // it can make difference
             bindings = <&kp>, <&kp>;
         };
     };
@@ -50,12 +50,13 @@
     //     };
     // };
 
-        combos {
+    combos {
         compatible = "zmk,combos";
 
         we {
             bindings = <&kp ESCAPE>;
             key-positions = <2 1>;
+            require-prior-idle-ms = <200>;
         };
 
         ei {
