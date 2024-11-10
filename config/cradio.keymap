@@ -10,18 +10,19 @@
 #define NUM_L  1
 #define SYM_L  2
 #define ARR_L  3
-#define BLT_L  4
-
-// Home row mods macro
-#define HRML(k1,k2,k3,k4) &hm LGUI k1  &hm LALT k2  &hm LCTRL k3  &hm LSHFT k4
-#define HRMR(k1,k2,k3,k4) &hm RSHFT k1  &hm RCTRL k2  &hm LALT k3  &hm RGUI k4
-#define HRMA(k1) &hm RALT k1
+#define WIN_L  4
+#define BLT_L  5
 
 // Layer switchers
 #define SYMSPACE  &lt SYM_L SPACE
 #define NUMTAB &lt NUM_L TAB
 #define ARRET &lt ARR_L RET
-#define SYMBSP &lt BLT_L BSPC
+#define WINBSP &lt WIN_L BSPC
+
+// Home row mods macro
+#define HRML(k1,k2,k3,k4) &hm LGUI k1  &hm LALT k2  &hm LCTRL k3  &hm LSHFT k4
+#define HRMR(k1,k2,k3,k4) &hm RSHFT k1  &hm RCTRL k2  &hm LALT k3  &hm RGUI k4
+#define HRMA(k1) &hm RALT k1
 
 // OS tricks
 #define WLIST &kp LC(F10) // window list
@@ -128,7 +129,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      HRMA(X)    &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  HRMA(DOT)  &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             SYMSPACE   NUMTAB         ARRET      SYMBSP
+                                             SYMSPACE   NUMTAB         ARRET      WINBSP
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -187,8 +188,26 @@
             >;
         };
 
-        bt_layer {
+        window_layer {
             label = "4";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none       WLIST     &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none         &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none     &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9)
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        bt_layer {
+            label = "5";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
