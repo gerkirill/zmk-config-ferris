@@ -21,7 +21,7 @@
 #define SYMSPACE  &lt SYM_L SPACE
 #define NUMTAB &lt NUM_L TAB
 #define ARRET &lt ARR_L RET
-#define SYMBSP &lt SYM_L BSPC
+#define SYMBSP &lt BLT_L BSPC
 
 // OS tricks
 #define WLIST &kp LC(F10) // window list
