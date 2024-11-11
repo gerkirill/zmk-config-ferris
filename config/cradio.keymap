@@ -59,6 +59,12 @@
             require-prior-idle-ms = <200>;
         };
 
+        io {
+            bindings = <&kp CLCK>;
+            key-positions = <7 8>;
+            require-prior-idle-ms = <200>;
+        }
+
         ei {
             bindings = <&caps_word>;
             key-positions = <2 7>;
@@ -127,7 +133,7 @@
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ;       │
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N        │  M      │ , <      │ . >      │ / ?      │
             &kp Z      HRMA(X)    &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  HRMA(DOT)  &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              SYMSPACE   NUMTAB         ARRET      WINBSP
