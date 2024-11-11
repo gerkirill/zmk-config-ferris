@@ -169,8 +169,8 @@
             label = "2";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  ]       │  )       │  }       │  %       │   │  ^       │  &       │  +       │  _       │  [       │
-            &kp ESC    &kp RBKT   &kp RPAR   &kp RBRC   &kp PRCNT      &kp CARET  &kp AMPS   &kp PLUS   &kp UNDER  &kp LBKT
+        //│  !       │  ]       │  )       │  }       │  %       │   │  ^       │  &       │  +       │  _       │  [       │
+            &kp EXCL   &kp RBKT   &kp RPAR   &kp RBRC   &kp PRCNT      &kp CARET  &kp AMPS   &kp PLUS   &kp UNDER  &kp LBKT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  [       │  (       │  {       │  @       │   │  `       │  "       │  =       │  -       │  '       │
             &kp SPACE  &kp LBKT   &kp LPAR   &kp LBRC   &kp AT         &kp GRAVE  &kp DQT   &kp EQUAL  &kp MINUS   &kp SQT
