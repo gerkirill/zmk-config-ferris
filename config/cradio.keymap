@@ -27,6 +27,12 @@
 // OS tricks
 #define WLIST &kp LC(F10) // window list
 
+// Adjust layer switching keys behavior
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+};
 
 / {
     behaviors {
