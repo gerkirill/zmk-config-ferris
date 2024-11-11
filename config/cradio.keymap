@@ -63,7 +63,7 @@
             bindings = <&kp CLCK>;
             key-positions = <7 8>;
             require-prior-idle-ms = <200>;
-        }
+        };
 
         ei {
             bindings = <&caps_word>;
