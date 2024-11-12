@@ -24,6 +24,13 @@
 #define HRMR(k1,k2,k3,k4) &hm RSHFT k1  &hm RCTRL k2  &hm LALT k3  &hm RGUI k4
 #define HRMA(k1) &hm RALT k1
 
+// BT macro
+#define DISC(profile) &bt BT_DISC profile
+#define SEL(profile) &bt BT_SEL profile
+#define CLR &bt BT_CLR
+#define CLR_ALL &bt BT_CLR_ALL
+
+
 // OS tricks
 #define WLIST &kp LC(F10) // window list
 
@@ -228,13 +235,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+           &sys_reset  &trans     DISC(0)     &trans    SEL(0)         &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     DISC(1)     CLR_ALL   SEL(1)         &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     DISC(2)     CLR       SEL(2)         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
