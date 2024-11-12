@@ -199,11 +199,11 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none       WLIST     &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  GUI     │  ALT     │  CTRL    │  SHIFT   │          │   │  <-      │  DOWN    │  UP      │  ->      │          │
-            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+        //│  GUI     │  ALT     │  CTRL    │  SHIFT   │          │   │  <-      │  DOWN    │  UP      │  ->      │  PG_UP   │
+            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp PG_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  DEL     │  HOME    │  END     │          │          │
-            &none      &none      &none      &none      &none          &kp DEL    &kp HOME   &kp END     &none     &none
+        //│          │          │          │          │          │   │  DEL     │  HOME    │  END     │          │  PG_DN   │
+            &none      &none      &none      &none      &none          &kp DEL    &kp HOME   &kp END     &none     &kp PG_DN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
