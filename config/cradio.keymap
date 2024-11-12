@@ -33,6 +33,8 @@
 
 // OS tricks
 #define WLIST &kp LC(F10) // window list
+#define CPGUP &kp LC(PG_UP) // Control + Page Up
+#define CPGDN &kp LC(PG_DN) // Control + Page Down
 
 // Adjust layer switching keys behavior
 &lt {
@@ -196,14 +198,14 @@
             label = "3";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none       WLIST     &none      &none
+        //│          │          │          │          │          │   │          │          │          │  PG_UP   │  PG_DN   │
+            &none      &none      &none      &none      &none          &none      &none       WLIST     &kp PG_UP  &kp PG_DN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  GUI     │  ALT     │  CTRL    │  SHIFT   │          │   │  <-      │  DOWN    │  UP      │  ->      │  PG_UP   │
-            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp PG_UP
+        //│  GUI     │  ALT     │  CTRL    │  SHIFT   │          │   │  <-      │  DOWN    │  UP      │  ->      │          │
+            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  DEL     │  HOME    │  END     │          │  PG_DN   │
-            &none      &none      &none      &none      &none          &kp DEL    &kp HOME   &kp END     &none     &kp PG_DN
+        //│          │          │          │          │          │   │  DEL     │  HOME    │  END     │          │          │
+            &none      &none      &none      &none      &none          &kp DEL    &kp HOME   &kp END    &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -215,8 +217,8 @@
             label = "4";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none       WLIST     &none      &none
+        //│          │          │          │          │          │   │          │          │          │  PG_UP   │  PG_DN   │
+            &none      &none      &none      &none      &none          &none      &none       WLIST      CPGUP      CPGDN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none         &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
